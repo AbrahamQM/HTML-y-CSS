@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Crea un formulario en el que haya que introducir los siguientes datos:
+
+Nombre
+
+Apellido
+
+e-mail
+
+teléfono
+
+dirección.
+
+Como segunda parte del ejercicio deberás crear una tabla, esta tabla tendrá 4 columnas y 4 filas, en esta tabla deberás hacer que:
+
+Una de las celdas ocupe dos columnas.
+
+Una de las celdas ocupe dos filas.
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de formularios</title>
+</head>
+<body>
+    <form action="recibeform.html"  method="post" style ="border: 2px #000 solid;margin: 30px;padding: 30px;background-color: #7eaa72;">
+        
+        <h2>Formulario del ejercicio 2 del módulo html y css</h2>
+
+        <fieldset>
+            <legend>Aquí son tud datos de contacto:</legend>
+
+            Nombre: <input id="formulario_nombre" name="nombre" pattern="[A-Za-z0-9]+" required placeholder="Aquí tu nombre" type="text"> 
+            <p></p>    
+
+            Apellidos: <input id="formulario_apellidos" name="apellidos" pattern="[A-Za-z0-9 ]+" required placeholder="Introduce aquí tus apellidos" type="text"> 
+            <p></p>
+
+            Email: <input id="formulario_apellido" name="e-mail" required placeholder="Introduce tu e-mail" type="email"> 
+            <p></p>
+
+            Teléfono: <input id="formulario_telefono" name="telefono" type="tel" required placeholder="Introduce tu número de teléfono">
+            <p></p>
+            
+            Dirección: 
+            <p></p>
+            <textarea cols="40" name="direccion" spellcheck="true" placeholder="Introduce tu dirección" required ></textarea>
+            <p></p>
+
+
+
+            <p></p>
+            <div>
+                <input type="submit" value="Enviar formulario" />
+            </div>
+        </fieldset>
+
+    </form>
+
+    <table border="1" style ="border: 2px #000 solid;margin: 30px;padding: 30px;background-color: #cde999;">
+        <caption>
+            Tabla
+        </caption>
+
+        <tbody>
+            <tr >
+                <td>celda 1 x 1</td>
+                <td>celda 1 x 2</td>
+                <td>celda 1 x 3</td>
+                <td>celda 1 x 4</td>
+            </tr>
+            <tr >
+                <td colspan="2">OCUPA 2 COLUMNAS</td>
+                
+                <td rowspan="2">OCUPA 2 FILAS</td>
+                <td>celda 2 x 4</td>
+            </tr>
+
+            <tr >
+                <td>celda 3 x 1</td>
+                <td>celda 3 x 2</td>
+                <!-- Aquí va una celda ocupada por la fila anterior -->
+                <td>celda 3 x 4</td>
+            </tr>
+            <tr>
+                <td>celda 4 x 1</td>
+                <td>celda 4 x 2</td>
+                <td>celda 4 x 3</td>
+                <td>celda 4 x 4</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+    
+</body>
+</html>
