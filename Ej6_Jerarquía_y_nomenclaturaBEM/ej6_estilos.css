@@ -1,0 +1,21 @@
+*{
+    color: rgb(218, 121, 121);
+}
+
+div .miparrafo{
+    color: rgb(255, 94, 0);
+}
+
+p {
+    color: blue;
+}
+
+div p{
+    color: brown;
+}
+
+.miparrafo{
+    color: rgb(126, 26, 219);
+}
+
+
