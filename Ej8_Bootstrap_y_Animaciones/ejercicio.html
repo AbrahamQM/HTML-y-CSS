@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--Para practicar con Bootstrap, en este ejercicio vas a crear un elemento animado a tu elección, además crearás varios botones a los cuales les aparecerá un tooltip en distintas posiciones (arriba, abajo, derecha, izquierda).-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Animaciones CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+
+
+    <title>Ej8 Bootstrap y Animaciones.</title>
+</head>
+<body>
+    <h1>Ej8 Bootstrap y Animaciones:<br></h1>
+    <div> <!--Animación-->
+        <h3>--Un elemento animado a tu elección:</h3>
+        <h4 class="animate__animated  animate__fadeInUp animate__infinite animate__slow" style="margin-left: 200px;">Un elemento animado</h4>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-10" >
+                <h3><br>--Botones a los cuales les aparecerá un tooltip en distintas posiciones (arriba, abajo, derecha, izquierda).</h3>
+                <!-- Botones de bootstrap -->
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip a la izquierda">
+                    Tooltip a la izquierda
+                </button>
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip encima">
+                    Tooltip encima
+                </button>
+                
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip debajo">
+                    Tooltip debajo
+                </button>
+
+                <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip a la derecha">
+                    Tooltip a la derecha
+                </button>
+        </div>
+    </div>    
+ 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
+</body>
+</html>
