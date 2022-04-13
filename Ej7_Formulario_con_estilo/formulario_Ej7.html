@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+En este ejercicio deberéis crear una página con un formulario de inicio de sesión, está pagina tendrá:
+
+-Una imagen de fondo.
+
+-Un formulario de inicio de sesión, contendrá mail y contraseña, 
+un recuadro seleccionable de "Acepto términos y condiciones" y un botón de enviar.
+
+Validación de campos.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo_formulario.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Fira+Sans:ital,wght@1,200&display=swap" rel="stylesheet">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="formulario">
+            <form>
+                <h1>Iniciar sesión</h1>
+                
+                <div class="login-form__field">
+                    <input id="correo"   type="email" required placeholder="Introduce tu e-mail" >
+                </div>
+
+                <div class="login-form__field">
+                    <input id="contraseña" type="password" required placeholder="Contraseña">
+                </div>
+
+                <div class="login-form__field--condiciones">
+                    <br>
+                    <input id="terminos" type="checkbox" required> <label>Acepto los términos y condiciones</label>
+                </div>
+
+                <div class="login-form__button">
+                    <br>
+                    <button type="submit" class="login-form__button--button">Enviar</button>
+                </div>
+                
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+/*En este ejercicio deberéis crear una página con un formulario de inicio de sesión, está pagina tendrá:
+
+Una imagen de fondo.
+
+Un formulario de inicio de sesión, contendrá mail y contraseña, 
+un recuadro seleccionable de "Acepto términos y condiciones" y un botón de enviar.
+
+Validación de campos.*/
+
+
+html, body{
+    margin: 0;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+body{
+    background-image:url(fondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.contenedor{
+    display: flex;
+    position: absolute;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+
+.login-form {
+    background-color: #fff;
+    max-width: 300px;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+
+.login-form__field{
+    margin-bottom: 10px;
+    
+}
+
+form{
+    background-color: #dee4e94d;
+    border-radius: 14%;
+    padding: 26px;
+    height: 240px;
+    width: 200px;
+}
+.formulario {
+    text-align: -webkit-center;
+    font-size: medium;
+}
+
+button.login-form__button--button {
+    font-family: 'Noto Serif', serif;
+    font-style: oblique;
+}
+
+label {
+    font-weight: 600;
+}
+
+input#contraseña {
+    background-image: url(key.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right;
+    background-origin: content-box;
+}
+
+
+input#correo {
+    background-image: url(@.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right;
+    background-origin: content-box;    
+}
