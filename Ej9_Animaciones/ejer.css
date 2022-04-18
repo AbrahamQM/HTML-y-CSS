@@ -45,7 +45,6 @@ div.rotar:hover{
 
 @keyframes fading {
     0%{opacity: 1;}
-    99%{opacity: 0; transform: translate(100px);}
-    100%{transform: translate(0,0)}
-    
+    99%{opacity: 0; transform: translate(250px);}
+    100%{transform: translate(0,0)}  
 }
