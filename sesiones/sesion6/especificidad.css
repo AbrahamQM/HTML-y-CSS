@@ -1,0 +1,34 @@
+
+
+#miparrafo {
+    color: orangered!important;
+}
+
+#miparrafo::first-line {
+    color: rgb(230, 92, 184)!important;
+}
+
+.verde {
+    color: blue!important;
+}
+
+[atributo="valor"] {
+    color: indigo;
+}
+
+.verde {
+    color: green;
+}
+
+p {
+    color: red;
+}
+
+input[type="text"] {
+
+    background-color: lightsalmon;
+}
+
+input {
+    background-color: lawngreen;
+}
