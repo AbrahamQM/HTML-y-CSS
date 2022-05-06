@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+ 
+
+<!-- iframe es para colocar un vídeo de otra web "se puede copiar el código que pone donde dice <insertar>"-->
+  Video de youtube
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/DUjCfXPs2gw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p></p>
+  
+  <!-- Ejemplo 1 
+    --poster es la imagen que se muestra antes de abrirlo
+    --controls: pone los botones de play, volumen, ...
+    --muted: empiea el video silenciado por defecto
+  -->
+  <div>Ejemplo 1</div>
+  <video src="elephants-dream.webm" poster="sesion3\dog-gc4b1be3a9_1920.webp" controls muted ></video>
+  <p></p>
+
+  <!-- Ejemplo 2 este no tiene audio, 
+  ---le puse width 300 para queno se vea grande
+  ---autoplay empieza a reproducir automáticamente
+  -->
+  <div>Ejemplo 2</div>
+  <video src="Matrix - 47802.mp4" autoplay loop width="300" controls></video>
+
+  <p></p>
+
+  <!-- Ejemplo 3:
+    Para darle diferentes opciones de formato al navegador, 
+    vamos a poner un video de cada formato accesible. (se debería hacer con el mismo vídeo en diferentes formatos)
+    el navegador va a intentar abrir los vídeos según el oden en que se los ponemos.
+  -->
+
+  <p><p></p>Ejemplo 3</p>
+  <video width="640" height="480" controls>
+      <source src="Matrix - 47802.mp4" type="video/mp4" >
+      <source src="elephants-dream.webm" type="video/webm">
+      <source src="video.ogv" type="video/ogg"> <!-- Este no existe es solo un ejemplo-->
+      <img src="imagen.png" alt="Video no soportado" /> <!-- Esta imagen no existe, pero se mostraría si el 
+      navegador no fuera capaz de reproducir ninguno de los vídeos, y si tampoco se ve la imagen, pondría
+      el texto que pusimos en alt-->
+      Su navegador no soporta multimedia.
+  </video>
+
+</body>
+</html>
