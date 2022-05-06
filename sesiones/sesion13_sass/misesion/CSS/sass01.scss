@@ -1,0 +1,207 @@
+/* Si pinchamos en la barra inferior del ide "VSC", el compilador ejecuta el código que hayamos 
+puesto y genera un archivo con el mismo nombre que el archivo que estamos compilando.css y, 
+un archivo .css.map con el mismo nombre 
+automáticamente */
+
+/* OJO, ver numeración de orden en los comentarios, en la hoja están desordenados para que el compilador los lea correctamente*/
+
+/* pongo este elemento body sólo para que se vea mejor posicionado el contenido (NO APARECE EN EL TUTORIAL) */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 5: Variables
+    se definen con:
+        $nombre: valor;
+    ej:    
+        $variable-blanco: #fff;
+*/
+
+    $color-primario: rgb(36, 36, 197);
+    $color-secundario: #6B6;
+
+    $espaciado-estandar: 10px;
+    $espaciado-doble: 20px;
+
+    $borde1 : 1px solid #ddd;
+
+    $fuente-normal: 1em;
+    $fuente-pequena: 0.8em;
+    $fuente-grande: 2em;
+
+    $tipografia-general: arial, verdana, sans-serif;
+    $tipografia-alternativa: 'Times New Roman', Times, serif;
+
+
+/* 1: mixin, explicación en index.html*/
+
+    @mixin color-principal {
+        /*color: blue;*/ 
+        color: $color-primario; /* modificado color estático por variable despues de definirla en parte 5*/
+    }
+
+    @mixin color-fondo {
+        /*background-color: aqua;*/
+        background-color: $color-secundario;    /* modificado color estático por variable despues de definirla en parte 5*/
+    }
+
+/* 2: mixin con parámetro de entrada:*/
+    @mixin encabezados($tamano){
+        h1{
+            font-size: $tamano;
+            font-size: 1.3em;
+            /*padding: 15px; modificado espaciado estático por variable despues de definirla en parte 5*/
+            padding: $espaciado-doble; 
+            @include color-principal; /*La instrucción include invoca al mixin con el nombre que indiquemos*/
+        }
+
+        h2{
+            font-size: $tamano - 0.2;
+        }
+
+        h3{
+            font-size: $tamano - 0.8;
+        }
+    }
+
+
+/* 3: después de crear los mixin, podemos invocarlos como si fuera una hoja css normal usando @include*/
+
+    div {
+        /*padding: 5px; modificado espaciado estático por variable despues de definirla en parte 5*/
+        padding: $espaciado-estandar;
+        height: 400px;
+        width: 300px;
+        /*margin-top: 20px;  modificado margen estático por variable despues de definirla en parte 5*/
+        margin-top: $espaciado-doble; 
+        @include color-principal;
+        @include color-fondo;
+    }
+
+/*4: Llamada al mixin con parámetro de entrada, le pasamos 2em*/
+    /*@include encabezados(2em); modificado el parámetro estático por variable despues de definirla en parte 5*/
+    @include encabezados($fuente-grande);
+
+/* 6: Anidamientos
+    Se trabajan usando:
+        &-nombre {}
+    ej:
+        &-borde{
+        border: 1px solid #ddd;
+        }
+*/
+    .caja {
+        padding: $espaciado-estandar; /*No es necesario usar variables, también se puede dejar esático así: padding: 20px; */
+        font-size: $fuente-normal;
+
+        &-borde {
+            border: $borde1;
+        }
+
+        &-fondo {
+        background-color: $color-secundario; 
+        }
+
+        &-espaciadoextra {
+            padding: 20px;
+        }
+    }
+
+/* 7: placeholder o extends:
+    se define usando:
+        %nombre{}
+    se invoca con la directiva @extend
+    ej:
+        h1 {
+            @extend %heading;
+        }
+
+*/
+
+    %heading {
+        background-color: blanchedalmond;
+        color: brown;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 2em;
+    }
+
+    h4 {
+        @extend %heading;
+    }
+
+/* 8: Dividir el código en módulos "Yo no lo hice para entenderlo mejor en el futuro"
+    - ver como lo hizo el en su sesión, creando archivos que comienzan con '_' ej:
+        _variables.scss
+        _mixins.css
+        ...
+      Pegamos dentro de cada uno los tipos de elementos de sass que correspondan
+
+    - para importar los archivos se haría poniendo al principio del documento.scss que estemos trabajando: @import "nombredelarchivo";
+    va sin '_' ni la extensión.
+    ej:
+        @import "variables"
+        @import "mixins"
+        ...
+*/
+
+/* 9: Funciones
+
+    - A diferencia de los demas elementos, tienen que retornar un valor.
+
+    - se declaran usando @function nombreFuncion($variable: valorPorDefecto){ @return resultado } ej:
+            @function numero($num: 500px){
+                @return  $num/2;
+            }
+    
+    -se invocan simplemente poniendo el nombre de la funcion(parámetro); ej: 
+                .caja-naranja {
+                    width: numero(300px);
+                    background-color: orange;
+                    text-align: center;
+                }
+*/
+
+    @function numero($num: 500px){
+        @return  $num/2;
+    }
+
+    .uno {
+    width: numero();
+    background-color: orange;
+    text-align: center;
+    }
+
+    .dos {
+    width: numero(600px);
+    background-color: aqua;
+    text-align: center;
+    }
+
+
+/*  9.2: Funciones con listas de valores (nth) cómo parámetro
+    funciones con listas de valores (pasadas por parámetro)
+    - nth se refiere a una lista parámetros se define así:
+        nth((lista de valores separados por ','), elemento que seleccionamos)
+    -nth($list , $n)
+
+    -ej: 
+        nth((Helvetica, Arial, sans-serif), 3);
+
+*/
+
+    .tres {
+    width: percentage(0.2);/* funcion percentage ya viene built-in (no tiene que ver con los nth)
+    ver en el enlace colocado en div class="uno" */
+    font-family: nth((Helvetica, Arial, sans-serif), 3);
+    }
+
+    .cuatro {
+    color: nth((white, red), 1);
+    }
+
+    .cinco {
+    width: nth((100%, 30%, 50%), 3);
+    }
+ 

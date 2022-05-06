@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+    <!--
+        Para poder trabajar mejor con sass:
+        INSTALMOS LA EXTENSIÓN "Live Sass Compiler"
+
+        luego comenzamos por los archivos sass01.css
+    -->
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <!--
+        Enlazamos a la primera hoja de esilos, pero no a la que hemos creado nosotros, 
+        sino a la que generó el VSC al darle a "watch Sass"
+    -->
+        <link rel="stylesheet" href="css/sass01.css">
+    </head>
+
+    <body>
+
+        <h1>h1: Nuestro primer proyecto SASS </h1>
+        <h2>Ver todo el trabajo (con las explicaciones) en <a href="CSS/sass01.scss"> sass01.scss</a></h2>
+        <h3>El archivo sass01.css se ha generado automáticamente al compilar el  sass01.scss</h3>
+        <div>
+            <p>
+                <h2>(PARTE 1) h2: ¿Qué son los mixins y para que se emplean?</h2>
+
+            Para esta parcela de trabajo, en Sass tenemos los mixins, que serían algo así como lo que conocemos como funciones en un lenguaje de programación.<br>
+        
+            Podemos escribir un mixin e invocarlo tantas veces como sea necesario, produciendo una salida CSS. <br>Un mixin además tiene la habilidad de recibir parámetros, como las funciones, de modo que se produzca la salida a partir del valor de los parámetros recibidos en su invocación.<br>
+        
+            Realmente lo más interesante es producir un código más claro, más expresivo y sobre todo con mayor facilidad de mantenimiento.<br></p>
+        </div>
+        <div>
+            <h3>(PARTE 1) h3: comprobando los cambios de tamaño por los mixin</h3>
+        </div> 
+        
+        <div class="caja-espaciadoextra">
+            (parte 6) Esta es la caja tipo caja-espaciadoextra definida en el sass01.scss parte 6
+            <h4>Aqui vemos un placeholder o (@extend) parte 7</h4>
+        </div>
+
+        <div class="uno">Parte 9 (funciones): Caja class="uno" <a href="https://platzi.com/tutoriales/1244-sass/6113-lista-de-funciones-de-sass/#:~:text=Sin%20mas%20esta%20es%20la,funciones%20que%20Sass%20nos%20ofrece.&text=hsl(%24hue%2C%20%24saturation%2C,hue%2C%20saturation%2C%20y%20lightness.&text=Genera%20un%20color%20con%20transparencia,componente%20hue%20de%20un%20color.">Ejemplos de funciones sass</a></div>
+        <div class="dos">Parte 9 (funciones): Caja class="dos"</div>
+        <div class="tres">Parte 9 (funciones): Caja class="tres"</div>
+        <div class="cuatro">Parte 9 (funciones): Caja class="cuatro"</div>
+        <div class="cinco">Parte 9 (funciones): Caja class="cinco"</div>
+        
+    </body>
+</html>

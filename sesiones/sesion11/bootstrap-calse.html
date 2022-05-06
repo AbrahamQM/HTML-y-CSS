@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags COPIADO DE BOOTSTRAP-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/docs.css">
+    <link rel="stylesheet" href="bootstrap-calse.html">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <!-- https://getbootstrap.com/docs/5.0/layout/grid/
+        
+        Breakpoints: Cambian la configuración del grid segun el tamaño de la pantalla 
+        xs: 0,sm: 576px,md: 768px,lg: 992px,xl: 1200px,xxl: 1400px
+    -->
+
+    <h1>Hello, world!</h1>
+
+    <div class="bd-example bd-example-row"> <!--Antes de el div "container", poner siempre esta línea o, no funcionarán los estilos-->
+        <div class="container">
+            <div class="row"> <!--Ordenamos el grid por filas"rows"-->
+                <div class="col-12 col-xl-2  d-flex justify-content-center ">  <!-- le ponemos col-12 para que ocupe todo el ancho de el viwepoint independientemente de en que breakpoint esté
+                --también pusimos col-xl-2 para que cuando esté en viewpoint xl ocupe sólo 2 columnas.
+                De forma que sólo en el breakpoint xl se pondrá en forma de 2 columnas.
+                -->
+                    <p>COLUMNA 1 con: col-12 col-xl-2  d-flex justify-content-center
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut nemo ipsum sequi! A aperiam totam ea praesentium voluptate eveniet minus, nobis deleniti vero id accusantium possimus repellendus quidem aliquam qui?</p>
+                </div>
+                
+                <div class="col col-lg-4 col-xl-2 d-flex justify-content-center "> <!-- 
+                    En esta línea definimos como queremos que se comporte cada elemento indicando segun cada breakpoint 
+                    cuando esté en large, ocupará 4 columnas,
+                    cuando esté en xl, ocupará 2 columnas
+                    ---d-flex : para que se comporte como elemento flex 
+                    ---justify-content-center: para que justifique el contenido al centro-->
+                    <div class="card" style="width: 18rem;"> <!--Elementos tipo "card"     copiados de la web de bootstrap-->
+                        <img src="spaghetti.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Columna 2 con: col-lg-4 col-xl-2 d-flex justify-content-center</h5>
+                        <p class="card-text">Some quick example text to build on t</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col d-none d-sm-none d-md-flex col-lg-4 col-xl-2 bg-primary d-flex justify-content-center ">  
+                    <!-- d-none ->no lo muestra en dispositivos xs
+                        none ->es la clase que hace que se oculten las columnas cuando estamos en el breakpoint que definamos en este caso cuando esté en breakpoint sm, se ocultará
+                    LOS COLORES QUE SE VEN DETRAS DE CADA CARD SON LOS QUE PONE bg-... -->
+                    <div class="card" style="width: 18rem;">
+                        <img src="spaghetti.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Columna3 con: d-none d-sm-none</h5>
+                        <p class="card-text">Some quick example text to build on t</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col d-none col-lg-4 col-xl-2 d-sm-none d-lg-flex d-flex justify-content-center  bg-success">  
+                    <div class="card" style="width: 18rem;">
+                        <img src="spaghetti.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Columna4 con: d-none col-lg-4 col-xl-2 d-sm-none d-lg-flex</h5>
+                        <p class="card-text">Some quick example text to build on t</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Ponemos una columna que ocupará todo el ancho y,
+                    sólo aparecerá en pantallas inferiores a xl, oculto en los xl-->
+                <div class="col-12 d-xl-none d-flex text-center justify-content-center">
+                    --COLUMNA 5 con: col-12 d-xl-none 
+                    se muestra sólo en breakpoints inferiores a xl 
+                </div>
+
+                <div class="col-xl-2 d-none d-xl-flex  d-flex justify-content-center bg-danger">  
+                    <div class="card" style="width: 18rem;">
+                        <img src="spaghetti.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Columna6 con: col-xl-2 d-none d-xl-flex </h5>
+                        <p class="card-text">Some quick example text to build on t.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 d-none d-xl-flex d-flex justify-content-center bg-warning">  
+                    <div class="card" style="width: 18rem;">
+                        <img src="spaghetti.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Columna6 con: col-xl-2 d-none d-xl-flex</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center justify-content-center">
+                    <button type="button" class="btn btn-success">More info...</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
