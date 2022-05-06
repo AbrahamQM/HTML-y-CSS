@@ -1,0 +1,138 @@
+@charset "UTF-8";
+/*importamos las variables*/
+/*velocidad*/
+/* nº de palabras */
+/* Normalizacion de padding, márgenes y tamaño de la caja*/
+*, *::before, *::after {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/*confiruramos el body con la fuente importada de google*/
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 500;
+  font-size: larger;
+}
+
+/* contenedor morphing */
+.morphing {
+  position: relative;
+  font-size: 80px;
+  background-color: rgb(5, 5, 5);
+  color: rgb(67, 226, 19);
+  min-height: 100vh;
+  filter: contrast(2) blur(1px);
+  /* blur se refiere al difuminado */
+}
+
+/* contenedor word */
+.word {
+  position: absolute;
+  top: 49%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: word 14s infinite ease-in-out;
+          animation: word 14s infinite ease-in-out;
+  /* Configuración de las transiciones */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /*sin este for, todas las palabras saldrían a la vez.
+       Explicación del for:
+      -Para i con valor 0 hasta el valor de wordCount
+      -crear en el css un child para cada elemento word .word:nth-child(i+1) {
+          -webkit-animation-delay: resultado de la formula;
+                  animation-delay: resultado de la formula;
+  */
+  /* esto también es configuración de las trancisiones
+  pero aquí editamos el difuminado y la opacidad según el momento de cada transición entre palabras*/
+}
+.word:nth-child(1) {
+  -webkit-animation-delay: -14s;
+          animation-delay: -14s;
+}
+.word:nth-child(2) {
+  -webkit-animation-delay: -12.25s;
+          animation-delay: -12.25s;
+}
+.word:nth-child(3) {
+  -webkit-animation-delay: -10.5s;
+          animation-delay: -10.5s;
+}
+.word:nth-child(4) {
+  -webkit-animation-delay: -8.75s;
+          animation-delay: -8.75s;
+}
+.word:nth-child(5) {
+  -webkit-animation-delay: -7s;
+          animation-delay: -7s;
+}
+.word:nth-child(6) {
+  -webkit-animation-delay: -5.25s;
+          animation-delay: -5.25s;
+}
+.word:nth-child(7) {
+  -webkit-animation-delay: -3.5s;
+          animation-delay: -3.5s;
+}
+@-webkit-keyframes word {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  20%, 80% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+}
+@keyframes word {
+  0%, 5%, 100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+  20%, 80% {
+    filter: blur(1em);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=morphing.css.map */
