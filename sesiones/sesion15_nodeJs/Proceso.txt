@@ -1,0 +1,30 @@
+Después de decargar e instalar NodeJs
+
+**con el cmd nos colocamos en la careta donde vayamos a ¿usar node?, en este caso 
+    C:\Users\Abraham\IdeaProjects\html y css\sesion15_NodeJS-Cliente-Servidor\misesion
+
+    *Ejecutamos: "npm init"
+
+    * Rellenamos los datos que nos pide (también podemos dejarlos por defecto)
+        se nos crea el archivo package.json con los datos que hemos puesto.
+        (podremos modificar los datos que hemos introducido)
+
+    *En la carpeta que hayamos instalado node, vamos a crear el index.js
+
+**Instalamos el módulo "express" de nodeJS para servidor web:
+    *Ejecutamos "npm install express --save"
+
+    *se crea la carpeta node_modules con la instalación y el archivos:
+    -package-lock.json 
+
+**Editamos el index.js (código copiado del profesor, explicacion en el archivo index.js)
+
+**Creamos la carpeta public (tal como la definimos en index.js) y dentro de esta el index.html
+
+**Iniciamos el servidor desde el cmd estando el la carpeta de la app
+    *Ejecutamos "node index.js"
+
+    *Para pararlo presionar ctrl+c
+
+---Después de comprobar que todo funciona, vimos un pequeño ejemplo de código JS en el index.html---
+

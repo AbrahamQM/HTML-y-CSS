@@ -1,0 +1,14 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "Ejercicio de implementacion de node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Abraham Quintana",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.0"
+  }
+}
