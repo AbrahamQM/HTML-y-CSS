@@ -1,0 +1,40 @@
+
+.grid-container {
+    display: grid; 
+    grid-template-columns: auto auto auto auto; /* 4 columnas automáticas = 5 lineas verticales*/
+    background-color: hsl(207, 90%, 54%);
+    padding: 10px;
+    grid-gap: 10px;  /* separacion entre celdas8como si fuera un margen)*/ 
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+
+  .grid-item:first-child {
+    background-color: brown;
+    grid-column: 1/3; /*se refiere a: 
+     --de la 1ª linea a la 3º-- 
+     empezamos a contar por el 1 en las lineas verticales refiriéndose a (1º linea = margen izquierdo), (3º linea = linea central-ya que son 5 en total-) 
+     --la 5º sería el margen derecho*/
+    grid-row: 1/3;/*idem a grid-column pero con filas*/
+  }
+
+  .grid-item:nth-child(2) {
+    background-color: rgb(97, 165, 42);
+    grid-row: 1/3;}
+
+  .grid-item:nth-child(6) {
+    background-color: rgb(165, 42, 124);
+    grid-column: 2/4;
+
+  }
+
+  .grid-item:nth-child(8) {
+    background-color: rgb(165, 153, 42);
+    grid-column: 2/5;
+
+  }

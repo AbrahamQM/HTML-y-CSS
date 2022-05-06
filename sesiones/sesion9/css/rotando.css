@@ -1,0 +1,41 @@
+
+
+.contenedor {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.misvg {
+    height: 50px;
+    width: 50px;
+    fill: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+}
+
+.misvg.active {
+    animation-name: rotando;
+    animation-duration: 1s;
+    animation-timing-function:linear; /* para que no tenga cortes*/
+    animation-iteration-count:infinite; /* para que no pare */ 
+    opacity: 1;
+    visibility:visible;
+    transition: all 2s ease-in;
+}
+
+  @keyframes rotando {
+    for {
+        fill: #333; /*equivalente a background color, ya que los svg no tienen fondo */
+        transform: rotate(0deg);}
+    50% {fill: #999;}
+    100% {fill: #333;
+        transform: rotate(180deg);}
+  }

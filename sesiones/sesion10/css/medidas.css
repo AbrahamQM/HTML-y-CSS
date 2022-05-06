@@ -1,0 +1,60 @@
+/*
+    Medidas fijas: pixeles, cm, mm, pt(puntos)
+    -------------------------
+    Medidas Relativas:
+
+    En responsive es mejor usar relativas: %, vh, vw
+
+    otras medidas relativas son em y rem
+
+        -por defecto 1 em son 16px (por defecto en el navegador)
+        El contenedor define el valor del em::after2 em x 20px = 40px
+        
+        -rem: tiene como referencia el root, por defecto 16px
+
+    https://www.campusmvp.es/recursos/post/desarrollo-web-movil-que-diferencia-existe-entre-el-viewport-y-la-resolucion-de-pantalla-de-un-dispositivo.aspx
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ejemplo de medida fija
+h2 {
+    font-size: 30px;
+}*/
+
+
+/*h2 {
+    font-size: 3em;
+}*/
+/* em: ES UN VALOR QUE PARTE DE LA UNIDAD QUE HAYAMOS DEFINIDO EN EL CONTENEDOR PADRE
+    POR DEFECTO, el navegador le da al valor em = 16px
+    -PERO SI EL CONTENEDOR(elemento inmediatamente superior o padre) DEFINE TAMAÑO DE LA FUENTE 30PX, 3em = 90px
+ */
+
+h2 {
+    font-size: 3rem;
+}
+
+/* EL VALOR rem SERÁ SIEMPRE DE 16PX 
+el tamaño de la fuente será 3rem x 16 = 48px */
+
+
+.container {
+    font-size: 40px;
+    background-color: chocolate;
+    height: 100vh; /*Hace referencia al  100% del alto del navegador (vh)
+    /* height: 100%; Hace referencia al 100% del contenedor padre*/
+    width: min-content;/*min-content se ajustrará al contenido del contenedor*/
+    /*width: 100vw; hace referencia al 100% del ancho del navegador (vw)*/
+}
+
+/*MEDIDAD VIEWPORT: 
+se usa para que un elemento coja un % del navegador (en lugar del contenedor padre)
+-vh: VIEWPORT HEIGHT(alto)
+-vw: VIEWPORT WIDTH(ancho)
+probar a jugar  con ellos en el navegador*/
+
+

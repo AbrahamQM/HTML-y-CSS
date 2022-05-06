@@ -1,0 +1,60 @@
+/*
+
+Responsive desing >> media queries
+
+__ancho y alto de la ventana gráfica
+__ancho y alto del dsipostivo
+__orientación : landscape o portrait
+
+OPERADORES AND / OR
+
+*Selectores de medio para cambiar el estilo según si vamos a imprimir una web, o mostrarla en pantalla o leerla(para ciegos)
+all
+print
+screen
+speech (para procedores de voz que leen las web "para ciegos")
+*/
+
+
+/* mobile first 
+----SE PREPARA EL DISEÑO PARA CUANDO EL ANCHO ES MAYOR AL TAMAÑO QUE DEFINAMOS en este caso 800px
+----DE FORMA QUE PRIMERO TENDREMOS EL ESTILO PARA MÓVILES DISEÑADO Y AÑADIMOS (como si fuera los casos especiales) EL DISEÑO PARA DISPOSITIVOS CUYO ANCHO MÍNIMO SEA EL QUE HAYAMOS DEFINIDO. 
+*/
+/*.responsive{
+    background-color: brown;
+    width: 100%;
+    height: 300px;
+}
+
+@media screen AND (min-width:800px){
+    .responsive{
+        background-color: green;
+        width: 700px;
+    }
+}*/
+
+/* desktop first 
+----SE PREPARA EL DISEÑO PARA CUANDO EL ANCHO ES MENOR AL TAMAÑO QUE DEFINAMOS en este caso 800px
+----DE FORMA QUE PRIMERO TENDREMOS EL ESTILO PARA PANTALLAS GRANDES DISEÑADO Y, AÑADIMOS (como si fuera los casos especiales) EL DISEÑO PARA DISPOSITIVOS CUYO ANCHO MÁXIMO SEA EL QUE HAYAMOS DEFINIDO. 
+*/
+
+.responsive{
+    background-color: brown;
+    width: 700px;
+    height: 300px;
+}
+
+/*
+@media screen AND (max-width:800px){
+    .responsive{
+        background-color: green;
+        width: 100%;
+    }
+}*/
+
+@media screen AND (max-width:800px) AND (min-width:600px) {
+    .responsive{
+        background-color: green;
+        width: 100%;
+    }
+}
